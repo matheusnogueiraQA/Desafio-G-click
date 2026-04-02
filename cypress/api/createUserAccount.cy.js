@@ -1,4 +1,4 @@
-import { gerarUsuario } from '../../support/utils'
+import { gerarUsuario } from '../support/utils'
 
 describe('Validar API createUserAccount', () => {
   let usuarioBase
@@ -9,7 +9,7 @@ describe('Validar API createUserAccount', () => {
     })
   })
 
-  it('Crie usuário com sucesso', () => {
+  it('Deve criar usuário com sucesso', () => {
     // cria usuário fake
     const usuarioCriado = gerarUsuario(usuarioBase)
 

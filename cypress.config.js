@@ -7,7 +7,12 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    allowCypressEnv: true
+    specPattern: [
+      "cypress/e2e/**/*.cy.js",
+      "cypress/api/**/*.cy.js"
+    ],
+    allowCypressEnv: true,
+    baseUrl: 'https://automationexercise.com',
 
   },
 

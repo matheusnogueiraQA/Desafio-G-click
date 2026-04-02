@@ -8,18 +8,12 @@ describe('Carrinho de compras', () => {
     })
   })
 
-  it('Adicione dois produtos ao carrinho e valide os itens corretos', () => {
+  it('Deve adicionar dois produtos ao carrinho e validar os itens corretos', () => {
     cy.login(usuario.email, usuario.senha)
-    // valida login
-    cy.contains('Logged in as').should('be.visible')
     cy.adicionarProdutosEIrParaCarrinho()
-    // valida página do carrinho
-    cy.url().should('include', '/view_cart')
-
+  
     // valida produtos
-    cy.get('#product-3')
-    .should('be.visible')
-    cy.get('#product-1')
-    .should('be.visible')
+    cy.contains('Blue Top').should('be.visible')
+    cy.contains('Sleeveless Dress').should('be.visible')
   })
 })

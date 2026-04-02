@@ -1,7 +1,7 @@
 import { faker } from "@faker-js/faker"
 
 describe('Login', () => {
- 
+
   let usuario
 
   beforeEach(() => {
@@ -20,14 +20,14 @@ describe('Login', () => {
       .should('be.visible')
   })
 
-  it('Realize login com sucesso', () => {
+  it('Deve realizar login com sucesso', () => {
     cy.login(usuario.email, usuario.senha)
     // valida login
     cy.contains('Logged in as')
       .should('be.visible')
   })
 
-  it('Realize logout com sucesso', () => {
+  it('Deve realizar logout com sucesso', () => {
     cy.login(usuario.email, usuario.senha)
     // valida login
     cy.contains('Logged in as')

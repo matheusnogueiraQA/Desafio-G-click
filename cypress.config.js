@@ -1,23 +1,22 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  allowCypressEnv: false,
-
   e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
+    baseUrl: 'https://automationexercise.com',
+
     specPattern: [
       "cypress/e2e/**/*.cy.js",
       "cypress/api/**/*.cy.js"
     ],
-    allowCypressEnv: true,
-    baseUrl: 'https://automationexercise.com',
 
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+    },
+     
   },
 
   viewportWidth: 1920,
   viewportHeight: 1080,
-  videosFolder: 'docs/videos',
-  screenshotsFolder: 'docs/screenshots'
+  videosFolder: 'cypress/videos',
+  screenshotsFolder: 'cypress/screenshots'
 });

@@ -1,4 +1,3 @@
 import './commands/login'
-import './commands/carrinho'
+import './commands/cart'
 import './commands/api'
-import 'cypress-plugin-api'

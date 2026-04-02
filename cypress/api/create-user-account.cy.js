@@ -1,20 +1,20 @@
 import { gerarUsuario } from '../support/utils'
 
-describe('Validar API createUserAccount', () => {
-  let usuarioBase
+describe('Create User API', () => {
+  let userBase
 
   beforeEach(() => {
-    cy.fixture('usuarioAPI').then((dado) => {
-      usuarioBase = dado
+    cy.fixture('userAPI').then((data) => {
+      userBase = data
     })
   })
 
   it('Deve criar usuário com sucesso', () => {
     // cria usuário fake
-    const usuarioCriado = gerarUsuario(usuarioBase)
+    const userCreated = gerarUsuario(userBase)
 
     // chama endpoint createUserAccount
-    cy.criarUsuarioAPI(usuarioCriado).then((response) => {
+    cy.criarUsuarioAPI(userCreated).then((response) => {
       // valida status http
       expect(response.status).to.eq(200)
 

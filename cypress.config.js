@@ -8,13 +8,11 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     allowCypressEnv: true
-    
+
   },
-  
-viewportWidth: 1920,
-    viewportHeight: 1080,
-videosFolder: 'cypress/videos', 
-screenshotsFolder:'cypress/screenshots'
 
-
+  viewportWidth: 1920,
+  viewportHeight: 1080,
+  videosFolder: 'docs/videos',
+  screenshotsFolder: 'docs/screenshots'
 });
